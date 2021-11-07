@@ -1,0 +1,102 @@
+<ion-header>
+  <div class="top-section ion-padding">
+    <!-- <div class="title">
+      <h2>Detector de humo</h2>
+    </div> -->
+    <div class="sub-title">
+      <h3>¿Necesitas ayuda?</h3>
+      <p>En caso de necesitarla da click al siguiente boton para llamar a emergencias</p>
+    </div>
+    <div class="action-buttons">
+      <ion-button color="danger" class="call">
+        <ion-icon name="call"></ion-icon>Llamar
+      </ion-button>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+  <div class="middle-section ion-padding">
+    <ion-text class="ion-text-center">
+      <h2>
+        Detector de Humo
+      </h2>
+    </ion-text>
+
+    <div>
+      <ion-progress-bar id="bar" [value]="percent" *ngIf="getSmokeValue()!='undefined'" color="success"></ion-progress-bar>
+    </div>
+    
+    <ion-text class="ion-text-center">
+      <h2 id="Smoke" *ngIf="getSmokeValue()!='undefined'"></h2>
+    </ion-text>
+
+    <ion-card>
+      <ion-item href="https://www.youtube.com/watch?v=JbWoLT-fGZw">
+        <img src="../../assets/video.png" alt="video">
+      </ion-item>
+      <ion-card-content class="centrar">
+        ¿Que hacer en caso de incendio?
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item href="https://www.solerpalau.com/es-es/blog/detectores-de-humo-que-son/#:~:text=Funcionan%20por%20un%20principio%20de,o%20de%20humo%20no%20visible.">
+        <img src="../../assets/question.png"  alt="question">
+      </ion-item>
+      <ion-card-content class="centrar">
+        ¿Que es un detector de humo y como funciona?
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item href="https://www.uanl.mx/">
+        <img src="../../assets/buy.png" alt="buy">
+      </ion-item>
+      <ion-card-content class="centrar">
+        Comprar
+       </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <div id="container">
+    <div *ngFor="let   data of  Device" >
+      <p>{{data.name}}</p>
+      <p>{{data.address}}</p>
+      <h5>desconectado / conectado</h5>
+      <div class="connect">}
+        <button (click)="connect(data.address)"></button>
+      </div>
+      
+    </div>
+    <div class="borderB">
+      <!--<ion-button>APAGAR ALARMA</ion-button>-->
+      <h1>EQUIPO 7</h1>
+    </div> 
+  </div>
+</ion-footer>
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div >
+    <h1 id="Smoke" *ngIf="getSmokeValue()!='undefined'"></h1>
+  </div>
+  <div id="container">
+    <strong>Ready to create an app?</strong>
+    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  </div>  
+</ion-content> -->

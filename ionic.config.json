@@ -1,0 +1,7 @@
+{
+  "name": "MicroProyect",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
